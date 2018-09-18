@@ -1,0 +1,60 @@
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>My EJS Template</title>
+  <meta name="description" content="Sample Web tutorials for Node JS">
+  <meta name="keywords" content="NodeJS,EJS">
+  <meta name="author" content="Tanmay Sarkar">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+  text-align: center;
+  padding: 200px;
+}
+
+#namanyay-search-btn {
+background:#0099ff;
+color:white;
+font: 'trebuchet ms', trebuchet;
+padding:10px 20px;
+border-radius:0 5px 5px 0;
+-moz-border-radius:0 5px 5px 0;
+-webkit-border-radius:0 5px 5px 0;
+-o-border-radius:0 5px 5px 0;
+border:0 none;
+font-weight:bold;
+}
+ 
+#namanyay-search-box {
+background: #eee;
+padding:10px;
+ border-radius:5px 0 0 5px;
+-moz-border-radius:5px 0 0 5px;
+-webkit-border-radius:5px 0 0 5px;
+-o-border-radius:5px 0 0 5px;
+border:0 none;
+width:160px;
+ }
+h2{font-family: arial;font-size: 30px;color: grey;}
+#j{background-color:lavender;display: inline;font-family: Arial;}
+#res{text-align: center;font-family: Arial;}
+#r{font-family: Arial;margin-top: 75px;font-weight:bold;}
+</style>
+</head>
+<body>
+    <h2><%= topicHead %></h2>
+    
+
+
+    <form id="searchthis" name="form1" style="display:inline;" method="POST" action="/">
+        <input id="namanyay-search-box" type="text" name="query" placeholder="search.." />
+        <input id="namanyay-search-btn" value="enter" type="submit"/>     
+      </form>   
+    <p id="r">Result in json format:</p> 
+    
+    <% if(userValue!=null){ %>    
+        <div id="res"><p id="j"><%= userValue %></p></div>
+    <%}%> 
+</body>
+
+</html>
